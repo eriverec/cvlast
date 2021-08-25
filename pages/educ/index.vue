@@ -32,13 +32,17 @@ import PostEducWidget from "~/components/PostEducWidget.vue";
 import Back from '~/components/Back.vue';
 
 export default {
-  name: "Home",
   components: {
     PostEducWidget, Back
   },
+  data() {
+    return {
+      title: "Educación"
+    }
+  },
   head() {
     return {
-      title: "Prismic Nuxt.js Blog"
+      title: this.title
     };
   },
   async asyncData({ $prismic, error }) {

@@ -32,13 +32,17 @@ import PostExpWidget from "~/components/PostExpWidget.vue";
 import Back from '~/components/Back.vue';
 
 export default {
-  name: "Home",
   components: {
     PostExpWidget, Back
   },
+  data() {
+    return {
+      title: "Experiencia"
+    }
+  },
   head() {
     return {
-      title: "Prismic Nuxt.js Blog"
+      title: this.title
     };
   },
   async asyncData({ $prismic, error }) {

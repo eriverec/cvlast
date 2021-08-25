@@ -32,13 +32,18 @@ import PostReferWidget from "~/components/PostReferWidget.vue";
 import Back from '~/components/Back.vue';
 
 export default {
-  name: "Home",
+  
   components: {
     PostReferWidget, Back
   },
+  data() {
+    return {
+      title: "Referencia personal"
+    }
+  },
   head() {
     return {
-      title: "Prismic Nuxt.js Blog"
+      title: this.title
     };
   },
   async asyncData({ $prismic, error }) {
@@ -77,7 +82,6 @@ export default {
 .home
   max-width: 700px
   margin: auto
- 
   .blog-avatar
     height: 140px
     width: 140px

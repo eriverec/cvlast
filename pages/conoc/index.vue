@@ -32,13 +32,17 @@ import PostConocWidget from "~/components/PostConocWidget.vue";
 import Back from '~/components/Back.vue';
 
 export default {
-  name: "Home",
   components: {
     PostConocWidget, Back
   },
+  data() {
+    return {
+      title: "Conocimientos"
+    }
+  },
   head() {
     return {
-      title: "Prismic Nuxt.js Blog"
+      title: this.title
     };
   },
   async asyncData({ $prismic, error }) {

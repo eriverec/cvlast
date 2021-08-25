@@ -67,6 +67,11 @@ export default {
       maxLoadingTime: 1
     };
   },
+  head() {
+    return {
+      title: this.title
+    };
+  },
   watch: {
     loading(newValue, oldValue) {
       if (newValue !== oldValue) {
@@ -103,11 +108,7 @@ export default {
       this.loadingTime = 0;
     }
   },
-  head() {
-    return {
-      title: "Prismic Nuxt.js Blog"
-    };
-  },
+  
   async asyncData({ $prismic, error }) {
     try {
       // Query to get blog home content

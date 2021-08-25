@@ -5,14 +5,15 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Prismic + Nuxt Blog example",
+    title: 'Home',
+    titleTemplate: 'Hoja de vida | %s',
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Prismic + Nuxt Blog example"
+        content: "Información sobre mi"
       }
     ],
     link: [
