@@ -3,7 +3,7 @@
     <div>
       <Menu />
       <nuxt />
-      <footer-prismic />
+      <!-- <footer-prismic /> -->
     </div>
   </client-only>
 </template>

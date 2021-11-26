@@ -42,8 +42,8 @@ a {
   );
   display: block;
   padding: calc(8.4px + 2vw);
-  background: #666;
-  color: white;
+  background: #eceff1;
+  color:#666;
   border-radius: 5px;
   box-shadow: 0 2px 40px 0 rgba(23, 41, 64, 0.05),
     0 5px 10px 0 rgba(23, 41, 64, 0.1);
@@ -60,7 +60,6 @@ a {
 
 .style_root__3iCRH:hover {
   transform: scale(0.97);
-  color: white;
 }
 
 .style_rootInner__32CX1 {
@@ -119,7 +118,7 @@ a {
 }
 
 .blog-post .parrafo {
-  color: #c9c9c9;
+  color: #666;
   font-size: 15px;
   font-weight: 500;
 }

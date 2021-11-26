@@ -108,8 +108,8 @@ export default {
 }
 
 .nuxt-link-exact-active {
-  color: #8254ff !important;
-  border-bottom: 3px solid #8254ff;
+  color: #3d5afe !important;
+  border-bottom: 3px solid #3d5afe;
 }
 
 .men {
@@ -154,8 +154,8 @@ nav .menuItems li a {
 }
 
 nav .menuItems li a:hover {
-  color: #8254ff;
-  border-bottom: 3px solid #8254ff;
+  color: #3d5afe;
+  border-bottom: 3px solid #3d5afe;
   font-weight: 600;
 }
 
