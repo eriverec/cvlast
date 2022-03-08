@@ -5,6 +5,10 @@
   padding-right: var(--page-margin);
 }
 
+p {
+  margin-bottom: 10px;
+}
+
 .style_root__3iCRH {
   padding: 0px;
   margin: 10px;
@@ -23,26 +27,40 @@ a {
 
 .blog-main .style_root__3iCRH img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: 45px;
+  object-fit: contain;
   border-radius: 5px;
-  filter: contrast(0.6);
+  /* filter: contrast(0.6); */
 }
 
-.blog-main .style_root__3iCRH {
-  /* padding: calc(0px); */
-}
 
 .style_root__3iCRH {
-  background-image: linear-gradient(
-    to top,
-    #ffffff 0%,
-    #ebedff 1%,
-    #f6dfff 71%
-  );
+  
   display: block;
-  padding: calc(8.4px + 2vw);
-  background: #eceff1;
+  /* padding: calc(8.4px + 2vw); */
+  /* padding: 15px; */
+
+  color:#666;
+  /* border-radius: 5px;
+  box-shadow: 0 2px 40px 0 rgba(23, 41, 64, 0.05),
+    0 5px 10px 0 rgba(23, 41, 64, 0.1); */
+
+  text-decoration: none;
+  /*color: var(--base-body-color);*/
+  /* -webkit-transition: background 0.2s ease-in-out; */
+  transition: background 0.2s ease-in-out;
+  /* border-left: 6px solid #ddd; */
+  background-position: 50%;
+  background-size: 100%;
+  transition: 0.3s;
+}
+
+.style_root__3iCRH.conoc {
+  
+  display: block;
+  padding: calc(8.4px + 2vw); 
+  padding: 15px;
+
   color:#666;
   border-radius: 5px;
   box-shadow: 0 2px 40px 0 rgba(23, 41, 64, 0.05),
@@ -50,16 +68,34 @@ a {
 
   text-decoration: none;
   /*color: var(--base-body-color);*/
-  -webkit-transition: background 0.2s ease-in-out;
+  /* -webkit-transition: background 0.2s ease-in-out; */
   transition: background 0.2s ease-in-out;
-
+  /* border-left: 6px solid #ddd; */
   background-position: 50%;
   background-size: 100%;
   transition: 0.3s;
 }
+/* ************
+***** EDUC ****
+************ */
+
+section.educ{
+  background: #333 ; 
+}
+
+.blog-post .educ .parrafo {
+  color: white;
+}
+
+.style_root__3iCRH.educ{
+  color: white;
+  border-left: none;
+  box-shadow: none;
+  padding: 0px;
+}
 
 .style_root__3iCRH:hover {
-  transform: scale(0.97);
+  /* transform: scale(0.97); */
 }
 
 .style_rootInner__32CX1 {
@@ -81,11 +117,11 @@ a {
   /*font-family: var(--font-headline);*/
   font-family: "Noto Sans TC", sans-serif;
   font-size: calc(19.4px + 2.55vw);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: 1.1;
   /* margin-top: -165px; */
   font-weight: 800;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   position: relative;
 }
 
@@ -114,7 +150,7 @@ a {
 
 .home {
   margin-top: 100px;
-  padding-top: 135px;
+  /* padding-top: 135px; */
 }
 
 .blog-post .parrafo {

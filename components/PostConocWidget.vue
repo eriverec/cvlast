@@ -1,16 +1,37 @@
 <template>
   <div class="blog-post">
-    <div class="style_root__3iCRH">
+    <div class="style_root__3iCRH conoc">
       <div class="style_rootInner__32CX1">
-        <!-- <prismic-image
-            v-if="postconoc.data && postconoc.data.image"
+        <div>
+          <!-- <prismic-image
             :field="postconoc.data.image"
             sizes="(max-width: 990px) 100vw (min-width: 991px) 57vw"
           /> -->
-        <div class="style_title__1jQC3">
-          <h2>{{ $prismic.asText(postconoc.data.title) }}</h2>
+          <img
+            v-if="postconoc.data.image.url"
+            :src="postconoc.data.image.url"
+            alt="post"
+          />
         </div>
-        <prismic-rich-text :field="postconoc.data.texto" class="parrafo" />
+
+        <div class="style_title__1jQC3 text-center">
+          <h6>{{ $prismic.asText(postconoc.data.title) }}</h6>
+          <!-- <h4>{{postconoc.data.nivel}}</h4> -->
+        </div>
+        <div class="style_title__1jQC3 text-center">
+          <b-progress
+            :value="postconoc.data.nivel"
+            :variant="
+              postconoc.data.nivel <= 30
+                ? 'danger'
+                : postconoc.data.nivel <= 60
+                ? 'warning'
+                : 'success'
+            "
+            show-progress
+          ></b-progress>
+        </div>
+        <!-- <prismic-rich-text :field="postconoc.data.texto" class="parrafo" /> -->
       </div>
     </div>
   </div>
@@ -18,48 +39,17 @@
 
 <script>
 //import LinkResolver from "~/plugins/link-resolver.js";
+import SlicesBlock from "~/components/SlicesBlock.vue";
 
 export default {
   props: ["postconoc"],
-  data: function() {
-    return {
-      link: "",
-      formattedDate: ""
-    };
+  components: {
+    SlicesBlock
   },
-  name: "post-conoc-widget",
-  methods: {
-    // Function to get the first paragraph of text in a blog post and limit the displayed text at 300 characters
-    getFirstParagraph(postconoc) {
-      const textLimit = 300;
-      const slices = postconoc.data.body;
-      let firstParagraph = "";
-      let haveFirstParagraph = false;
-
-      slices.map(function(slice) {
-        if (!haveFirstParagraph && slice.slice_type == "text") {
-          slice.primary.text.forEach(function(block) {
-            if (block.type == "paragraph" && !haveFirstParagraph) {
-              firstParagraph += block.text;
-              haveFirstParagraph = true;
-            }
-          });
-        }
-      });
-
-      const limitedText = firstParagraph.substr(0, textLimit);
-
-      if (firstParagraph.length > textLimit) {
-        return limitedText.substr(0, limitedText.lastIndexOf(" ")) + "...";
-      } else {
-        return firstParagraph;
-      }
-    }
-  }
-  /*created () {
-    this.link = LinkResolver(this.menu),
-    this.formattedDate = Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(this.menu.data.date))
-  },*/
+  data: function() {
+    return {};
+  },
+  name: "post-conoc-widget"
 };
 </script>
 

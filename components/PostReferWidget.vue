@@ -1,6 +1,6 @@
 <template>
   <div class="blog-post">
-    <div class="style_root__3iCRH">
+    <div class="style_root__3iCRH educ">
       <div class="style_rootInner__32CX1">
         <!-- <prismic-image
             v-if="postrefer.data && postrefer.data.image"

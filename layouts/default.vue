@@ -1,7 +1,7 @@
 <template>
   <client-only>
-    <div>
-      <Menu />
+    <div class="">
+      <!-- <Menu /> -->
       <nuxt />
       <!-- <footer-prismic /> -->
     </div>
